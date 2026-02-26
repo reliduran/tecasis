@@ -106,7 +106,8 @@ $servicio = $resultado->fetch_assoc();
         <section class="cta-section">
             <h2>¿Necesitas ayuda personalizada?</h2>
             <p>Nuestro equipo está listo para atenderte.</p>
-            <a href="index.php#chatbot-widget" class="btn-white">Hablar con Soporte</a>
+            <a href="javascript:void(0);" onclick="toggleChat()" class="btn btn-white">Hablar con Soporte</a>
+
         </section>
     </main>
 
@@ -137,5 +138,26 @@ $servicio = $resultado->fetch_assoc();
         </div>
     </footer>
 
+    <!-- Widget del Chatbot (Requerimiento RF-03) -->
+<div id="chatbot-widget">
+    <div id="chat-header" onclick="toggleChat()">
+        <span>Asistente Virtual</span>
+        <i id="chat-icon" class="fa-solid fa-chevron-up"></i>
+    </div>
+    <div id="chat-body" style="display: none; flex-direction: column;">
+        <div id="chat-messages">
+            <div class="bot-msg">Hola, bienvenido a Tecasis. ¿En qué te ayudo?</div>
+        </div>
+        <div id="chat-input-area">
+            <input type="text" id="user-input" placeholder="Pregunta algo..." onkeypress="handleEnter(event)">
+            <button onclick="sendMessage()"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+    </div>
+</div>
+<!-- Incluir el Widget del Chatbot (puedes crear un include para esto) -->
+<?php include 'includes/chatbot_widget.php'; ?> 
+
+<!-- Cargar el script de la lógica del bot -->
+<script src="assets/js/bot.js"></script>
 </body>
 </html>
