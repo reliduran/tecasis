@@ -1,5 +1,5 @@
 <?php
-// Compatible with PHP 7.1
+// Compatible with PHP 7.1.
 
 // Parse the URL part to be proxied
 $url = str_replace('/' . basename(__FILE__), '', $_SERVER['REQUEST_URI']);

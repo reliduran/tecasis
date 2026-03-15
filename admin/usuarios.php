@@ -1,7 +1,7 @@
 <?php
 // admin/usuarios.php
 session_start();
-// Si la sesión no tiene rol o el rol NO es 'admin', detener la ejecución
+// Si la sesión no tiene rol o el rol NO es 'admin', detener la ejecución.
 if (!isset($_SESSION['user_rol']) || $_SESSION['user_rol'] != 'admin') {
     // Redirigir al dashboard o mostrar error
     header("Location: dashboard.php"); 

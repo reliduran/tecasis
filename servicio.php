@@ -2,7 +2,7 @@
 require_once 'config/db.php';
 $conn->set_charset("utf8");
 
-// Validamos que venga un ID numérico
+// Validamos que venga un ID numérico.
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
     header("Location: index.php");
     exit();
@@ -81,7 +81,7 @@ $servicio = $resultado->fetch_assoc();
                 <div class="servicio-banner" style="margin-bottom: 30px; text-align: center;">
                 <img src="<?php echo htmlspecialchars($servicio['imagen_path']); ?>" 
                     alt="<?php echo htmlspecialchars($servicio['titulo']); ?>" 
-                    style="max-width: 80%; height: auto; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); object-fit: cover; max-height: 400px;">
+                    style="width: 25%; height: auto; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); object-fit: cover; max-height: 400px;">
             </div>
             <?php endif; ?>
             <p style="opacity: 0.8; font-size: 1.1rem;">Detalles y características del servicio</p>

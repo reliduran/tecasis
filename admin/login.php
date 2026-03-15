@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    // 1. Usar Sentencias Preparadas (Prepared Statements) para seguridad total
+    // 1. Usar Sentencias Preparadas (Prepared Statements) para seguridad total.
     $sql = "SELECT id_usuario, nombre_completo, password_hash, rol FROM usuarios_admin WHERE email = ?";
     
     if ($stmt = $conn->prepare($sql)) {

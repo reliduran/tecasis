@@ -1,5 +1,5 @@
 <?php
-// Buscamos el archivo .env en la raíz
+// Buscamos el archivo .env en la raíz.
 $path = __DIR__ . '/../.env';
 
 if (!file_exists($path)) {

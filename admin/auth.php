@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $conn->real_escape_string($_POST['email']);
     $password = $_POST['password'];
 
-    // Buscamos el usuario
+    // Buscamos el usuario.
     $sql = "SELECT id_usuario, nombre_completo, password_hash FROM usuarios_admin WHERE email = '$email'";
     $result = $conn->query($sql);
 

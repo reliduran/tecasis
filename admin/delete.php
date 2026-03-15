@@ -2,7 +2,7 @@
 session_start();
 require_once '../config/db.php';
 
-// Seguridad: Solo admin logueado puede borrar
+// Seguridad: Solo admin logueado puede borrar.
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
     exit();

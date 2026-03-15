@@ -1,20 +1,20 @@
-// assets/js/bot.js - L¨®gica Corregida
+// assets/js/bot.js - Lï¿½ï¿½gica Corregida.
 
 function toggleChat() {
     const widget = document.getElementById('chatbot-widget');
     const body = document.getElementById('chat-body');
     const icon = document.getElementById('chat-icon');
 
-    // Si el widget est¨¢ totalmente oculto (display: none), lo mostramos primero
+    // Si el widget estï¿½ï¿½ totalmente oculto (display: none), lo mostramos primero
     if (widget.style.display === 'none') {
         widget.style.display = 'block';
-        // Y aseguramos que el cuerpo est¨¦ visible
+        // Y aseguramos que el cuerpo estï¿½ï¿½ visible
         body.style.display = 'flex';
         icon.className = 'fa-solid fa-chevron-down';
         return; 
     }
 
-    // Si ya est¨¢ visible, alternamos entre minimizar y maximizar
+    // Si ya estï¿½ï¿½ visible, alternamos entre minimizar y maximizar
     if (body.style.display === 'none' || body.style.display === '') {
         body.style.display = 'flex';
         icon.className = 'fa-solid fa-chevron-down'; // Flecha abajo
@@ -78,7 +78,7 @@ async function sendMessage() {
         
         const errorDiv = document.createElement('div');
         errorDiv.className = 'bot-msg error';
-        errorDiv.textContent = "Error de conexi¨®n.";
+        errorDiv.textContent = "Error de conexiï¿½ï¿½n.";
         chatBox.appendChild(errorDiv);
     }
 

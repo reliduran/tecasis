@@ -2,7 +2,7 @@
 require_once 'config/db.php';
 $conn->set_charset("utf8");
 
-// 1. CARGAR SECCIÓN NOSOTROS
+// 1. CARGAR SECCIÓN NOSOTROS.
 $sql_nosotros = "SELECT * FROM seccion_nosotros WHERE id=1";
 $res_nosotros = $conn->query($sql_nosotros);
 $nosotros = $res_nosotros->fetch_assoc();
@@ -128,7 +128,7 @@ $servicios = $conn->query($sql_servicios);
         <div class="footer-grid">
             <div class="footer-col">
                 <h4>TECASIS</h4>
-                <p>Tu socio tecnológico de confianza en el Estado de México.</p>
+                <p>Tu socio tecnológico de confianza en El Salvador.</p>
             </div>
             <div class="footer-col">
                 <h4>Menú</h4>
@@ -141,13 +141,12 @@ $servicios = $conn->query($sql_servicios);
             <div class="footer-col">
                 <h4>Contacto</h4>
                 <ul>
-                    <li><i class="fa-solid fa-phone"></i> +52 55 1234 5678</li>
-                    <li><i class="fa-solid fa-envelope"></i> contacto@tecasis.com</li>
+                    <li><i class="fa-solid fa-envelope"></i> tecasis_info@tecasis.com</li>
                 </ul>
             </div>
         </div>
         <div style="text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
-            <p>&copy; 2025 Tecasis S.A.S de C.V.</p>
+            <p>&copy; 2026 Tecasis S.A.S de C.V. | Designed by: Rubén Durán</p>
         </div>
     </footer>
 

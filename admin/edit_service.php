@@ -1,6 +1,6 @@
 <?php
 session_start();
-// SEGURIDAD: Si no hay sesión, volver al login
+// SEGURIDAD: Si no hay sesión, volver al login.
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
     exit();

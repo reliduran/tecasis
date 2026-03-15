@@ -9,7 +9,7 @@ $id = intval($_GET['id']);
 
 $mensaje = "";
 
-// 1. GUARDAR CAMBIOS
+// 1. GUARDAR CAMBIOS.
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $claves = $conn->real_escape_string($_POST['palabras_clave']);
     $resp = $conn->real_escape_string($_POST['respuesta']);
